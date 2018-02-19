@@ -19,13 +19,14 @@ Alumno::Alumno(std::string n, std::string fNac, char gen, std::string matricula,
     this->genero=gen;
     this->matricula=matricula;
     this->gene=generacion;
+    std::cout<<this->toString()<<"\n";
 }
 
 void Alumno::setHorario(Horario*horario) {
-    Horario*to_String();
+
 }
 Horario*Alumno::getHorario() {
-
+    return getHorario();
 }
 std::string Alumno::getGene() {
     return gene;
@@ -41,8 +42,8 @@ Materia*Alumno::getMateria() {
     return materias[6];
 }
 std::string Alumno::toString() {
-    std::string stringAl ="";
-    stringAl = "Nombre: " + nombre+ ", Fecha de Nac: "+fechaNac +", Genero: "+ genero +", Matricula:" +matricula + "Generación"+ gene;
+    std::string stringAl;
+    stringAl = "Nombre: " + getNombre()+ ", Fecha de Nac: "+getFechaNac() +", Genero: "+ getGenero() +", Matricula:" +getMatricula() + "Generacion"+ getGene();
     return stringAl;
 }
 

@@ -14,6 +14,7 @@ Profesor::Profesor(std::string n, std::string fNac, char gen, std::string nomina
     this->fechaNac=fNac;
     this->genero=gen;
     this->nombre=n;
+    std::cout<<this->toString()<<"\n";
 
 }
 void Profesor::setHorario(Horario*horario) {

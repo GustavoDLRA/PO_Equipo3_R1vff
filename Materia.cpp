@@ -17,7 +17,7 @@ Materia::Materia(std::string nombre, std::string clave, Horario*horario, Profeso
     this->Maestro=maestro;
 }
 void Materia::setHorario(Horario*horario) {
-    this->Horario::toString();
+    this->horario=horario;
 }
 void Materia::setMaestro(Profesor*profesor) {
     this->Maestro=profesor;

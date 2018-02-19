@@ -20,12 +20,12 @@ protected:
 //Metodos
 public:
     Persona();
-    Persona(std::string,std::string, char);
+    Persona(std::string nombre,std::string fechaNac, char gen);
     void setEstatura(float);
     void setPeso(float);
     std::string getNombre();
     std::string getFechaNac();
-    std::string getGenero();
+    char getGenero();
     float getEstatura();
     float getPeso();
     virtual std::string toString()=0;

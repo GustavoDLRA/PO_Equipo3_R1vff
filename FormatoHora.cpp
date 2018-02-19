@@ -8,6 +8,7 @@ FormatoHora::FormatoHora(int h, int m, int s) {
     this->horas=h;
     this->minutos=m;
     this->segundos=s;
+    std::cout<<this->to_String()<<"\n";
 }
 bool FormatoHora::validaHrs(int) {
     bool horaCorrecta = true;
@@ -37,11 +38,11 @@ int FormatoHora::getSegundos() {
     return segundos;
 }
 std::string FormatoHora::to_String() {
-    std::string muestraHora="";
-    std::string muestraMinutos="";
-    std::string muestraSegundos="";
-    muestraHora= horas;
-    muestraMinutos= minutos;
-    muestraSegundos= segundos;
+    std::string muestraHora;
+    std::string muestraMinutos;
+    std::string muestraSegundos;
+    muestraHora= getHoras();
+    muestraMinutos= getMinutos();
+    muestraSegundos= getSegundos();
     return muestraHora+ "/"+muestraMinutos+"/"+muestraSegundos;
 }

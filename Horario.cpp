@@ -3,7 +3,6 @@
 //
 
 #include "Horario.h"
-#include "Horario.h"
 Horario::Horario() {
     this->inicio= nullptr;
     this->fin= nullptr;
@@ -14,11 +13,13 @@ Horario::Horario(FormatoHora*inicio, FormatoHora*fin, std::string aula) {
     this->inicio=inicio;
     this->fin=fin;
     this->aula=aula;
+
 }
 Horario::Horario(int h, int m, int s, FormatoHora*inicio, FormatoHora*fin, std::string aula){
     this->inicio=inicio;
     this->fin=fin;
     this->aula=aula;
+
 }
 void Horario::setAula(std::string aula) {
     this->aula=aula;

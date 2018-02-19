@@ -10,10 +10,10 @@ Persona::Persona() {
     this->estatura=0;
     this->peso=0;
 }
-Persona::Persona(std::string, std::string, char) {
+Persona::Persona(std::string nombre, std::string fechaNac, char gen) {
     this->nombre=nombre;
     this->fechaNac=fechaNac;
-    this->genero = genero;
+    this->genero = gen;
     this->estatura=estatura;
     this->peso=peso;
 }
@@ -29,8 +29,9 @@ std::string Persona::getNombre() {
 std::string Persona::getFechaNac() {
     return this->fechaNac;
 }
-std::string Persona::getGenero() {
-    return this->(std::to_string(genero));
+
+char Persona::getGenero() {
+    return this->genero;
 }
 float Persona::getEstatura() {
     return this->estatura;

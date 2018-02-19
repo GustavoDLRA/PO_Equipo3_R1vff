@@ -25,7 +25,7 @@ public:
     void setMaterias(Materia*m[6]);
     Horario*getHorario();
     Materia*getMateria();
-    std::string getMatricula;
+    std::string getMatricula();
     std::string getGene();
     std::string toString();
 

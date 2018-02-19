@@ -9,12 +9,12 @@
 #include <iostream>
 
 class FormatoHora {
-//Atributos
+//Atributos de la clase FormatoHora.
 private:
     int horas;
     int minutos;
     int segundos;
-//Metodos
+//Metodos de la clase FormatoHora.
 public:
     FormatoHora(int h, int m, int s);
     int getHoras();
