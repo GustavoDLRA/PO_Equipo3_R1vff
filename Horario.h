@@ -18,8 +18,9 @@ private:
 //Metodos
 public:
     Horario();
-    Horario(FormatoHora*inicio,FormatoHora*fin,std::string);
+    Horario(FormatoHora*inicio,FormatoHora*fin,std::string aula);
     Horario(int h, int m, int s, FormatoHora*inicio, FormatoHora*fin, std::string aula);
+    Horario(std::string aula);
     FormatoHora*CalculaDuracion();
     void setAula(std::string aula);
     FormatoHora*getInicio();

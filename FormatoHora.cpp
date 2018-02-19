@@ -41,8 +41,8 @@ std::string FormatoHora::to_String() {
     std::string muestraHora;
     std::string muestraMinutos;
     std::string muestraSegundos;
-    muestraHora= getHoras();
-    muestraMinutos= getMinutos();
-    muestraSegundos= getSegundos();
+    muestraHora= (std::to_string(getHoras()));
+    muestraMinutos= (std::to_string(getMinutos()));
+    muestraSegundos= (std::to_string(getSegundos()));
     return muestraHora+ "/"+muestraMinutos+"/"+muestraSegundos;
 }

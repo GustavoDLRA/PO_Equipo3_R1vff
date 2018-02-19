@@ -89,7 +89,7 @@ int main(){
     std::cin>>m1;
     std::cout<<"Ingrese la cantidad de segundos del instante en el que inicia la clase (SOLO SEG.)\n";
     std::cin>>s1;
-    //FALTA SEGUIR INGRESANDO lo de la fecha
+    //FALTA SEGUIR INGRESANDO lo de la fecha.
     std::cout<<"Ingrese la hora de termino de la clase (SOLO HORA):\n";
     std::cin>>h2;
     std::cout<<"Ingrese los minutos de la hora a los que acaba la clase: (SOLO MINUTOS):\n";
@@ -103,8 +103,12 @@ int main(){
 
     Alumno elAlumno =*new Alumno(nombre,fechaNac,genero,matricula,gene);
     Profesor Profe = *new Profesor(nombreP,fechaNacP,genero,nomina);
+    std::cout<<"De:";
     FormatoHora horaInicio = *new FormatoHora(h1,m1,s1);
+    std::cout<<"Hasta:";
     FormatoHora horaFinal=*new FormatoHora(h2,m2,s2);
+    std::cout<<"Aula:";
+    Horario elHorario = *new Horario(aula);
     //Horario elHorario= *new Horario(horaInicio,horaFinal,aula);
 
 
