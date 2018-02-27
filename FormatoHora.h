@@ -10,10 +10,13 @@
 
 class FormatoHora {
 //Atributos de la clase FormatoHora.
-private:
+public: //Antes Private
     int horas;
     int minutos;
     int segundos;
+    //Clases amigas
+    friend FormatoHora operator + (const FormatoHora &fH1, const FormatoHora &fH2);
+    friend FormatoHora operator - (const FormatoHora &fH1, const FormatoHora &fH2);
 //Metodos de la clase FormatoHora.
 public:
     FormatoHora(int h, int m, int s);
@@ -23,6 +26,8 @@ public:
     std::string to_String();
     bool validaHrs(int);
     bool validaMS(int);
+
+
 };
 
 

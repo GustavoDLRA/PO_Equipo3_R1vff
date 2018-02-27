@@ -5,9 +5,20 @@
 #include "Alumno.h"
 
 int main(){
+    FormatoHora hora1(13,23,50);
+    FormatoHora hora2(20,40,15);
+
+    FormatoHora hora3=hora1+hora2;
+    FormatoHora hora4= hora2 - hora1;
+
+    std::cout<<"Suma de horas:\n";
+    std::cout<<hora3.horas<<":"<<hora3.minutos<<":"<<hora3.segundos<<"\n";
+    std::cout<<"Resta de horas: \n";
+    std::cout<<hora4.horas<<":"<<hora4.minutos<<":"<<hora4.segundos<<"\n";
+
 //Declaramos nuestros atributos en el Main
     //Atributos de Horario.
-    FormatoHora*inicio;
+    /*FormatoHora*inicio;
     FormatoHora*fin;
     std::string aula;
     //Atributos de Materia.
@@ -31,18 +42,21 @@ int main(){
     float estatura;
     float estaturaP;
     float peso;
-    float pesoP;
+    float pesoP;*/
 //Atributos de formato hora necesarios para marcar la hora.
     //Hora de Inicio.
-    int h1;
+    /*int h1;
     int m1;
     int s1;
     //Hora final.
     int h2;
     int m2;
-    int s2;
+    int s2;*/
+
+
+
 //Comenzamos a definir cada uno de los Metodos a usar.
-    std::cout<<"Bienvenido al sistema de creacion de horario.<<\n";
+   /* std::cout<<"Bienvenido al sistema de creacion de horario.<<\n";
     std::cout<<"ESTA EN MODO EDICION DE HORARIO\n";
     std::cout<<"ETAPA 1: INGRESE DATOS DEL ESTUDIANTE.\n";
     std::cout<<"Introduzca el nombre del estudiante:\n";
@@ -101,7 +115,7 @@ int main(){
 
 
 
-    Alumno elAlumno =*new Alumno(nombre,fechaNac,genero,matricula,gene);
+    /*Alumno elAlumno =*new Alumno(nombre,fechaNac,genero,matricula,gene);
     Profesor Profe = *new Profesor(nombreP,fechaNacP,genero,nomina);
     std::cout<<"De:";
     FormatoHora horaInicio = *new FormatoHora(h1,m1,s1);
@@ -109,7 +123,7 @@ int main(){
     FormatoHora horaFinal=*new FormatoHora(h2,m2,s2);
     std::cout<<"Aula:";
     Horario elHorario = *new Horario(aula);
-    //Horario elHorario= *new Horario(horaInicio,horaFinal,aula);
+    //Horario elHorario= *new Horario(horaInicio,horaFinal,aula);*/
 
 
 
