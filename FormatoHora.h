@@ -14,18 +14,23 @@ public: //Antes Private
     int horas;
     int minutos;
     int segundos;
+    //double horas;
+    //double minutos;
+    //double segundos;
     //Clases amigas
     friend FormatoHora operator + (const FormatoHora &fH1, const FormatoHora &fH2);
     friend FormatoHora operator - (const FormatoHora &fH1, const FormatoHora &fH2);
 //Metodos de la clase FormatoHora.
 public:
-    FormatoHora(int h, int m, int s);
+    FormatoHora(int h,int m, int s);
+    //FormatoHora(double h, double m, double s);
     int getHoras();
     int getMinutos();
     int getSegundos();
     std::string to_String();
     bool validaHrs(int);
     bool validaMS(int);
+    bool validar();
 
 
 };

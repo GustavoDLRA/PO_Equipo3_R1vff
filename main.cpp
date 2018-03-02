@@ -5,6 +5,8 @@
 #include "Alumno.h"
 
 int main(){
+
+    //PRUEBA DE FUNCIONAMIENTO DE FormatoHora
     FormatoHora hora1(13,23,50);
     FormatoHora hora2(20,40,15);
 
@@ -12,9 +14,11 @@ int main(){
     FormatoHora hora4= hora2 - hora1;
 
     std::cout<<"Suma de horas:\n";
-    std::cout<<hora3.horas<<":"<<hora3.minutos<<":"<<hora3.segundos<<"\n";
+    //std::cout<<hora3.horas<<":"<<hora3.minutos<<":"<<hora3.segundos<<"\n";
+    std::cout<<hora3.to_String()+"\n";
     std::cout<<"Resta de horas: \n";
-    std::cout<<hora4.horas<<":"<<hora4.minutos<<":"<<hora4.segundos<<"\n";
+    //std::cout<<hora4.horas<<":"<<hora4.minutos<<":"<<hora4.segundos<<"\n";
+    std::cout<<hora4.to_String()+"\n";
 
 //Declaramos nuestros atributos en el Main
     //Atributos de Horario.
@@ -45,7 +49,7 @@ int main(){
     float pesoP;*/
 //Atributos de formato hora necesarios para marcar la hora.
     //Hora de Inicio.
-    /*int h1;
+   /* int h1;
     int m1;
     int s1;
     //Hora final.
@@ -93,10 +97,10 @@ int main(){
     std::cout<<"FIN DE INGRESO DE DATOS DEL PROFESOR. CONCLUYE ETAPA 2.\n";
     std::cout<<".\n";
     std::cout<<".\n";
-    std::cout<<".\n";
-    std::cout<<"ETAPA 3: INGRESE LOS DATOS DE LA CLASE.\n";
-    std::cout<<"Ingrese el Aula donde se tomará la clase: \n";
-    std::cin>>aula;
+    std::cout<<".\n";*/
+    /*std::cout<<"ETAPA 3: INGRESE LOS DATOS DE LA CLASE.\n";
+    //std::cout<<"Ingrese el Aula donde se tomará la clase: \n";
+    //std::cin>>aula;
     std::cout<<"Ingrese la hora de inicio de la clase (SOLO LA HORA):\n";
     std::cin>>h1;
     std::cout<<"Ingrese los minutos de la hora inicio de la clase (SOLO LOS MINUTOS):\n";
@@ -109,7 +113,8 @@ int main(){
     std::cout<<"Ingrese los minutos de la hora a los que acaba la clase: (SOLO MINUTOS):\n";
     std::cin>>m2;
     std::cout<<"Ingrese los segundos de la hora termino(SOLO SEGUNDOS): \n";
-    std::cin>>s2;
+    std::cin>>s2;*/
+
 
 
 
@@ -121,8 +126,8 @@ int main(){
     FormatoHora horaInicio = *new FormatoHora(h1,m1,s1);
     std::cout<<"Hasta:";
     FormatoHora horaFinal=*new FormatoHora(h2,m2,s2);
-    std::cout<<"Aula:";
-    Horario elHorario = *new Horario(aula);
+    //std::cout<<"Aula:";
+    //Horario elHorario = *new Horario(aula);
     //Horario elHorario= *new Horario(horaInicio,horaFinal,aula);*/
 
 

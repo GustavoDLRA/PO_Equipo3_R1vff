@@ -4,7 +4,8 @@
 
 #include "Horario.h"
 //Constructor por default.
-Horario::Horario() {
+/*
+    Horario::Horario() {
     this->inicio= nullptr;
     this->fin= nullptr;
     this->aula="";
@@ -66,3 +67,4 @@ std::string Horario::toString() {
     horaFinal= getFin()->to_String();
     return "De: " + horaInicial + "a " + horaFinal;
 }
+ */

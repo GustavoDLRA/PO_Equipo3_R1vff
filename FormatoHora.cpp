@@ -9,9 +9,15 @@ FormatoHora::FormatoHora(int h, int m, int s) {
     this->horas=h;
     this->minutos=m;
     this->segundos=s;
-    //std::cout<<this->to_String()<<"\n";
+    std::cout<<this->to_String()<<"\n";
 }
-/*bool FormatoHora::validaHrs(int) {
+/*FormatoHora::FormatoHora(double h, double m, double s) {
+    this->horas=h;
+    this->minutos=m;
+    this->segundos=s;
+    //std::cout<<this->to_String()<<"\n";
+}*/
+bool FormatoHora::validaHrs(int) {
     bool horaCorrecta = true;
     if(horas>=0 && horas<=23){
         bool horacorrecta=true;
@@ -42,16 +48,16 @@ std::string FormatoHora::to_String() {
     std::string muestraHora;
     std::string muestraMinutos;
     std::string muestraSegundos;
-    muestraHora= (std::to_string(getHoras()));
-    muestraMinutos= (std::to_string(getMinutos()));
-    muestraSegundos= (std::to_string(getSegundos()));
-    return muestraHora+ "/"+muestraMinutos+"/"+muestraSegundos;
-}*/
-FormatoHora operator +(const FormatoHora &fH1, const FormatoHora &fH2){
+    muestraHora= (std::to_string(horas));
+    muestraMinutos= (std::to_string(minutos));
+    muestraSegundos= (std::to_string(segundos));
+    return muestraHora+ ":"+muestraMinutos+":"+muestraSegundos;
+}
+/*FormatoHora operator +(const FormatoHora &fH1, const FormatoHora &fH2){
     //CONTINUAR A PARTIR DE AQUÍ.
-    int resultadoH;
-    int resultadoM;
-    int resultadoS;
+    double resultadoH;
+    double resultadoM;
+    double resultadoS;
 
     resultadoH=fH1.horas+fH2.horas;
     resultadoM=fH1.minutos+fH2.minutos;
@@ -71,16 +77,16 @@ FormatoHora operator +(const FormatoHora &fH1, const FormatoHora &fH2){
 
     //FormatoHora resultado(fH1.horas +fH2.horas, fH1.minutos+fH2.minutos,fH1.segundos+fH2.segundos); FORMA RAPIDA DE PONER LO RESPECTIVO.
     return resultado;
-}
-FormatoHora operator -(const FormatoHora &fH1, const FormatoHora &fH2){
-    int resultadoH;
-    int resultadoM;
-    int resultadoS;
+}*/
+/*FormatoHora operator -(const FormatoHora &fH1, const FormatoHora &fH2){
+    double resultadoH;
+    double resultadoM;
+    double resultadoS;
     //Al hacer el calculo originalmente, me salían horas negativas, por lo que
     //Tuve que hacer que alterar los valores de fH2
-    resultadoH= -1*(fH2.horas-fH1.horas);
-    resultadoM=-1*(fH2.minutos-fH1.minutos);
-    resultadoS= 1*(fH2.segundos-fH1.segundos);
+    resultadoH= fabs(fH2.horas-fH1.horas);
+    resultadoM=fabs(fH2.minutos-fH1.minutos);
+    resultadoS= fabs(fH2.segundos-fH1.segundos);
 
     if (resultadoM>=60){
         resultadoH++;
@@ -98,4 +104,70 @@ FormatoHora operator -(const FormatoHora &fH1, const FormatoHora &fH2){
 
     return resultado;
 
+}*/
+FormatoHora operator +(const FormatoHora &fH1, const FormatoHora &fH2){
+    //CONTINUAR A PARTIR DE AQUÍ.
+    int resultadoH;
+    int resultadoM;
+    int resultadoS;
+
+    resultadoH=fH1.horas+fH2.horas;
+    resultadoM=fH1.minutos+fH2.minutos;
+    resultadoS=fH1.segundos+fH2.segundos;
+
+    /*if (resultadoM>=60){
+        resultadoH++;
+        resultadoM= resultadoM-60;
+    }
+    if (resultadoS>=60){
+        resultadoM++;
+        resultadoS=resultadoS-60;
+    }*/
+
+    FormatoHora resultado = *new FormatoHora(resultadoH,resultadoM,resultadoS);
+
+    resultado.validar();
+    //FormatoHora resultado(fH1.horas +fH2.horas, fH1.minutos+fH2.minutos,fH1.segundos+fH2.segundos); FORMA RAPIDA DE PONER LO RESPECTIVO.
+    return resultado;
 }
+FormatoHora operator -(const FormatoHora &fH1, const FormatoHora &fH2){
+    int resultadoH;
+    int resultadoM;
+    int resultadoS;
+    //Al hacer el calculo originalmente, me salían horas negativas, por lo que
+    //Tuve que hacer que alterar los valores de fH2
+    resultadoH= -1*(fH2.horas-fH1.horas);
+    resultadoM=-1*(fH2.minutos-fH1.minutos);
+    resultadoS= 1*(fH2.segundos-fH1.segundos);
+
+    /*if (resultadoM>=60){
+        resultadoH++;
+        resultadoM= resultadoM-60;
+    }
+    if (resultadoS>=60){
+        resultadoM++;
+        resultadoS=resultadoS-60;
+    }*/
+
+
+    FormatoHora resultado = *new FormatoHora(resultadoH,resultadoM,resultadoS);
+
+    resultado.validar();
+
+    return resultado;
+
+}
+
+bool FormatoHora::validar() {
+
+    if (this->segundos>=60){
+        this->minutos++;
+        this->segundos=segundos-60;
+    }
+    if(this->minutos>=60){
+        this->horas++;
+        this->minutos=minutos-60;
+    }
+
+}
+//ACTIVIDAD 6 

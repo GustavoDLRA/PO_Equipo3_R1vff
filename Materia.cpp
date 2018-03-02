@@ -4,7 +4,7 @@
 
 #include "Materia.h"
 #include "Materia.h"
-Materia::Materia(std::string nombre, std::string clave) {
+/*Materia::Materia(std::string nombre, std::string clave) {
     this->Nombre ="";
     this->Clave="";
     this->horario= nullptr;
@@ -37,7 +37,7 @@ Profesor*Materia::getMaestro() {
 
 /*std::string Horario::getAula() {
     return this->aula;
-}*/
+}
 std::string Materia::toString() {
     std::string tHorario="";
     std::string tMaestro="";
@@ -49,3 +49,4 @@ std::string Materia::toString() {
     return "Nombre: " + getNombre() + ", Clave:" + getClave() + tHorario + "aula: " + ", Maestro:"+ getMaestro()->toString();
 
 }
+ */
