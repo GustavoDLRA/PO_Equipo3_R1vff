@@ -9,9 +9,10 @@ int main(){
     //PRUEBA DE FUNCIONAMIENTO DE FormatoHora
     FormatoHora hora1(13,23,50);
     FormatoHora hora2(20,40,15);
-
-    FormatoHora hora3=hora1+hora2;
+    FormatoHora hora3=hora1 + hora2;
     FormatoHora hora4= hora2 - hora1;
+    FormatoHora hora5 = hora1 < hora2;
+
 
     std::cout<<"Suma de horas:\n";
     //std::cout<<hora3.horas<<":"<<hora3.minutos<<":"<<hora3.segundos<<"\n";
@@ -19,7 +20,15 @@ int main(){
     std::cout<<"Resta de horas: \n";
     //std::cout<<hora4.horas<<":"<<hora4.minutos<<":"<<hora4.segundos<<"\n";
     std::cout<<hora4.to_String()+"\n";
-
+    FormatoHora hora6 = hora1 > hora2;
+    FormatoHora hora7 = hora1 <= hora2;
+    FormatoHora hora8 = hora1 >= hora2;
+    FormatoHora hora9 = hora1 != hora2;
+    // std::cout<<"Hora 1 es menor a hora 2? \n";
+    //std::cout<<"¿Hora 1 es mayor a hora 2? \n";
+    //std::cout<<"¿Hora 1 es menor o igual a hora 2?\n";
+    //std::cout<<"Hora 1 es mayor o igual a hora 2\n";
+    //std::cout<<"¿Hora 1 es diferente a hora 2?\n";
 //Declaramos nuestros atributos en el Main
     //Atributos de Horario.
     /*FormatoHora*inicio;

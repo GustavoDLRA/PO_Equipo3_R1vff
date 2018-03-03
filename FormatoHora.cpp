@@ -157,6 +157,63 @@ FormatoHora operator -(const FormatoHora &fH1, const FormatoHora &fH2){
     return resultado;
 
 }
+FormatoHora operator < (const FormatoHora &fH1, const FormatoHora &fH2){
+    bool menorQue;
+    if(fH1.horas<fH2.horas){
+        menorQue=true;
+        std::cout<<"La hora 1, es menor que la hora 2\n";
+    }
+    if (fH1.horas>fH2.horas){
+        menorQue=false;
+        std::cout<<"La hora 1, no es menor que la hora 2\n";
+    }
+
+}
+FormatoHora operator > (const FormatoHora &fH1, const FormatoHora &fH2){
+    bool mayorQue;
+    if(fH1.horas>fH2.horas){
+        mayorQue=true;
+        std::cout<<"La hora 1, es mayor que la hora 2\n";
+    }
+    if (fH1.horas<fH2.horas){
+        mayorQue=false;
+        std::cout<<"La hora 1, no es mayor que la hora 2 \n";
+    }
+}
+FormatoHora operator <= (const FormatoHora &fH1, const FormatoHora &fH2){
+    bool menoroIgual;
+    if (fH1.horas && fH1.minutos && fH1.segundos<=fH2.horas && fH2.minutos &&fH2.segundos){
+        menoroIgual=true;
+        std::cout<<"La hora 1, es menor o igual a la hora 2 \n";
+    }
+    if(fH1.horas && fH1.minutos && fH1.segundos>fH2.horas || fH2.minutos || fH2.segundos ){
+        menoroIgual=false;
+        std::cout<<"La hora 1, no es menor o igual a la hora 2 \n";
+    }
+}
+FormatoHora operator >= (const FormatoHora &fH1, const FormatoHora &fH2){
+    bool mayoroIgual;
+    if (fH1.horas && fH1.minutos && fH1.segundos >= fH2.horas && fH2.minutos &&fH2.segundos ){
+        mayoroIgual=true;
+        std::cout<<"La hora 1, es mayor o igual a la hora 2\n";
+    }
+    if (fH1.horas && fH1.minutos && fH1.segundos < fH2.horas && fH2.minutos && fH2.segundos){
+        mayoroIgual=false;
+        std::cout<<"La hora 1, no es mayor o igual a la hora 2\n";
+    }
+}
+FormatoHora operator != (const FormatoHora &fH1, const FormatoHora &fH2){
+    bool diferenteA;
+    if (fH1.horas || fH1.minutos || fH1.segundos != fH2.horas || fH2.minutos || fH2.segundos){
+        diferenteA=true;
+        std::cout<<"La hora 1, es diferente a la hora 2\n ";
+    }
+    if (fH1.horas && fH1.minutos && fH1.segundos == fH2.horas && fH2.minutos && fH2.segundos){
+        diferenteA=false;
+        std::cout<<"La hora 1, es igual a la hora 2 \n";
+    }
+}
+
 
 bool FormatoHora::validar() {
 
@@ -170,4 +227,19 @@ bool FormatoHora::validar() {
     }
 
 }
-//ACTIVIDAD 6 
+/*bool FormatoHora::menorA() {
+
+}
+bool FormatoHora::mayorA() {
+
+}
+bool FormatoHora::menorOIgualA() {
+
+}
+bool FormatoHora::mayorOIgualA() {
+
+}
+bool FormatoHora::diferenteA() {
+
+}*/
+//ACTIVIDAD 6

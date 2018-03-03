@@ -20,6 +20,11 @@ public: //Antes Private
     //Clases amigas
     friend FormatoHora operator + (const FormatoHora &fH1, const FormatoHora &fH2);
     friend FormatoHora operator - (const FormatoHora &fH1, const FormatoHora &fH2);
+    friend FormatoHora operator < (const FormatoHora &fH1,const FormatoHora &fH2);
+    friend FormatoHora operator > (const FormatoHora &fH1, const FormatoHora &fH2);
+    friend FormatoHora operator <= (const FormatoHora &fH1, const FormatoHora &fH2);
+    friend FormatoHora operator >= (const FormatoHora &fH1, const FormatoHora &fH2);
+    friend FormatoHora operator != (const FormatoHora &fH1, const FormatoHora &fH2);
 //Metodos de la clase FormatoHora.
 public:
     FormatoHora(int h,int m, int s);
@@ -31,6 +36,11 @@ public:
     bool validaHrs(int);
     bool validaMS(int);
     bool validar();
+    /*bool menorA();
+    bool mayorA();
+    bool menorOIgualA();
+    bool mayorOIgualA();
+    bool diferenteA();*/
 
 
 };
